@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet Message </title>
+</head>
+<style>
+    body {
+        background-color: #313131;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 40vh;
+        font-size: 3rem;
+    }
+
+    #greet {
+        color: aqua;
+    }
+
+    /* media query  */
+    @media (max-width: 575px) {
+        h1 {
+            font-size: 1.4rem;
+        }
+    }
+</style>
+
+<body>
+    <h1>Hello Sarang <span id="greet"></span></h1>
+
+    <script>
+        const greet = document.getElementById("greet");
+
+        // alert(value);
+
+        const date = new Date();
+        let hour = date.getHours();
+
+
+        if (hour >= 4 && hour <= 11) {
+            greet.innerText = "Good Morning . 🌞";
+            greet.style.color = "cyan";
+        }
+        if (hour >= 12 && hour <= 15) {
+            greet.innerText = "Good Afternoon .🔆";
+            greet.style.color = "brown";
+        }
+        if (hour >= 16 && hour <= 20) {
+            greet.innerText = "Good Evening . ☕";
+            greet.style.color = "lime";
+        }
+        if (hour >= 21 && hour <= 23) {
+            greet.innerText = "Good Night . 🌙";
+            greet.style.color = "red";
+        }
+        if (hour >= 0 && hour <= 3) {
+            greet.innerText = "Take sleep . 😴";
+            greet.style.color = "violet";
+        }
+
+
+
+    </script>
+</body>
+
+</html>
